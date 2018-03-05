@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Praise2018.Controllers.Account>
+
+
+<table class="table" id="userList">
+    <tr>
+        <th>
+           Name
+        </th>
+        <th>
+           Actions
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+           @item.Name
+        </td>
+       
+        <td>
+           @using (Html.BeginForm("DeleteUser", "Admin"))
+           {
+               <input type="submit" value="Delete"/>
+           }
+        </td>
+        
+    </tr>
+}
+
+</table>
