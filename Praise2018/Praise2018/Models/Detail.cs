@@ -8,25 +8,17 @@ namespace Praise2018.Models
 
     public partial class Detail
     {
-        [Key]
-        [Column(Order = 0)]
-        [StringLength(50)]
+        public string Alias { get; set; }
         public string Name { get; set; }
 
-        public DateTime? UpdateDate { get; set; }
+        public DateTime? Datetime { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        public string Descrip { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
-        [StringLength(50)]
+        public string Desc { get; set; }
+
+
         public string ToWho { get; set; }
 
-        [StringLength(10)]
-        public string UpdateId { get; set; }
-
-       // public int Month { get; set; }
+        public int Month { get; set; }
     }
 }

@@ -8,16 +8,13 @@
 
     public partial class Account
     {
-        [Key]
-        [StringLength(50)]
+        public string Alias { get; set; }
         public string Name { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string Alias { get; set; }
+        
+        
 
-        [Required]
-        [StringLength(50)]
+        
         public string Role { get; set; }
 
         public int Got { get; set; }
